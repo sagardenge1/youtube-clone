@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <title>Youtube</title>
+
+    <style>
+      .yt-menu {
+        color: white;
+        font-size: 26px;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .yt-menu:hover {
+        background-color: #ffffff2d;
+      }
+
+      .yt-searchbox {
+        width: 60%;
+        display: flex;
+        padding: 5px 10px;
+      }
+      .yt-searchbox input {
+        width: 85%;
+        border-top-left-radius: 999px;
+        border-bottom-left-radius: 999px;
+        padding: 5px 10px;
+        outline: 1px solid rgba(177, 177, 177, 0.252);
+      }
+
+      .yt-searchbox input:focus {
+        outline: 1px solid rgba(0, 128, 255, 0.61);
+      }
+
+      .yt-searchbox span {
+        border-top-right-radius: 999px;
+        border-bottom-right-radius: 999px;
+        width: 60px;
+        background-color: rgba(87, 87, 87, 0.489);
+        border: 1px solid rgba(87, 87, 87, 0.489);
+        padding: 6px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .yt-searchbox span:hover {
+        background-color: rgba(127, 127, 127);
+      }
+
+      .yt-action {
+        margin: 0px 8px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 26px;
+      }
+
+      .yt-sidebar{
+        width: 10%;
+        background-color: red;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 10px;
+
+      }
+
+      .thumbnail {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .text-dim {
+        color: #aaaaaa;
+      }
+
+      .separator-circle {
+        font-size: 8px;
+      }
+
+      .chanel-logo {
+        width: 70px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #0f0f0f">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <!-- navbar -->
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid p-0">
+              <i class="bi bi-list yt-menu"></i>
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="yt-searchbox mx-auto">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="border-0 bg-transparent text-white"
+                    id="filtertext"
+                  />
+                  <span>
+                    <i class="bi bi-search"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="yt-action">
+                <i class="bi bi-camera-video mx-4"></i>
+                <i class="bi bi-bell mx-4"></i>
+                <i class="bi bi-person-circle mx-4"></i>
+              </div>
+            </div>
+          </nav>
+          <!-- navbar end -->
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/apna-collage.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/apna-clg-profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"/>
+                
+              </div>
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Shradha Ma'am in talks with CTO at Microsoft for Startups | Future of Tech Jobs, AI & more
+                </p>
+                <span class="text-dim d-block">Apna College</span>
+                <span class="text-dim">165K Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">10 Days Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/dhruv-rathi-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/dhruv-rathi-profile.jpeg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Is India becoming a DICTATORSHIP? | Chandigarh Elections | Farmers Protest | Dhruv Rathee
+                </p>
+                <span class="text-dim d-block">Dhruv Rathi</span>
+                <span class="text-dim">23M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/chirag-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/chirag-dudhat-profile.jpeg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Watch π (Pi) painting "The area of a Circle" ENDLESSLY - 1440p 🎵 : "Deer" by ANBR
+                </p>
+                <span class="text-dim d-block">Chirag Dudhat</span>
+                <span class="text-dim">97K Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">5 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/study-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/study-profile.avif"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    How can India get POK Back ? History of POK | POK Occupied | UPSC
+                </p>
+                <span class="text-dim d-block">StudyIQ IAS</span>
+                <span class="text-dim">13M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">2 Years Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/techburner.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/channels4_profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                  Motorola Edge 50 Pro Unboxing - 50MP AI Camera 📸 144Hz Curved
+                  Display 📱 @ ₹27,999 !
+                </p>
+                <span class="text-dim d-block">Tech Burner</span>
+                <span class="text-dim">4M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/code-with-harry-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/code-with-harry-profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Python Tutorial For Beginners In Hindi (With Notes) 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                </p>
+                <span class="text-dim d-block">Code With Harry</span>
+                <span class="text-dim">23M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">3 Years Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/ezbhai-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/ezsnippet-profile.jpeg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    50+ LPA Roadmap | ezSnippet | Neeraj Walia | coding | programing | MERN
+                </p>
+                <span class="text-dim d-block">Neeraj Walia</span>
+                <span class="text-dim">707K Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">2 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/freecodecamo-post.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/freecodecamp-profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Azure AI Fundamentals Certification 2024 (AI-900) - Full Course to PASS the Exam
+                </p>
+                <span class="text-dim d-block">freeCodeCamp.org</span>
+                <span class="text-dim">57K Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/meghalaya.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/kanishk-gupta-profile (1).jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Meghalaya: World’s Wettest Place | Mawsynram Village | North East India
+                </p>
+                <span class="text-dim d-block">kanishk Gupta</span>
+                <span class="text-dim">4.8M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">6 Month Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/rathi-post-2.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/dhruv-rathi-profile.jpeg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    The Apollo 11 Moon Landing Mystery | Neil Armstrong | Dhruv Rathee
+                </p>
+                <span class="text-dim d-block">Dhruv Rathi</span>
+                <span class="text-dim">24M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">1 Year Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/apna-clg -post-2.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/apna-clg-profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    C Language Tutorial for Beginners (with Notes & Practice Questions) free total cources
+                </p>
+                <span class="text-dim d-block">Apna College</span>
+                <span class="text-dim">27M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">2 Years Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="video-card mt-3 text-light">
+            <img src="./img/codewithharry-post2.jpg" class="img-fluid m-1 thumbnail" />
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./img/code-with-harry-profile.jpg"
+                  class="img-fluid chanel-logo mt-1 mx-2"
+                />
+              </div>
+
+              <div class="text-wrap ms-3">
+                <p class="fw-bold">
+                    Introduction to Java + Installing Java JDK and IntelliJ IDEA for Java
+                </p>
+                <span class="text-dim d-block">Code With Harry</span>
+                <span class="text-dim">7.8M Views</span>
+                <span class="text-dim mx-2 separator-circle">●</span>
+                <span class="text-dim">2 Years Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
