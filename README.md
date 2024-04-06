@@ -18,4 +18,4 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 Create a new pull request.
 
 # Screenshots
-<img src="./Screenshot 2024-04-06 235235.png">~
+<img src="./img/Screenshot 2024-04-06 235235.png">~
